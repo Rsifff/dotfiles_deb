@@ -1,8 +1,11 @@
 #!/bin/bash
-#Script d'installation des fichiers de Rsifff
-
- ###Variable
-### Debut du script
+#filename            	: install_dotfiles.sh
+#description    	: This script is used to install the dotfiles of my github: https://github.com/Rsifff/dotfiles/
+#author             	: Roman Le Page (Rsifff)
+#date                	: 2020/07/31
+#version             	: 1.0
+#usage               	: $ chmod +x install_dotfiles.sh && sudo ./install_dotfiles.sh
+#======================================================================================
 
 function colorecho() {
 	BG='\033[1;32m'
@@ -33,21 +36,29 @@ fc-cache -v -f
 
 function ohmyzsh() {
 colorecho "[+] Installing Oh-My-Zsh, config, aliases"
+
+#Retrieving the path of the home files
 getent passwd | cut -d: -f6 | grep -w root >> listhomeuser
 getent passwd | cut -d: -f6 | grep home >>listhomeuser
 file=$(tail listhomeuser)
+
 for homeuser in $file ; do
 	if [[ $homeuser = "/home/syslog" || $homeuser = "/home/cups-pk-helper" ]]; then
 		echo " "
 	else
 		pathuser="$homeuser/"
+
+		colorecho "[+] Installing Oh-My-Zsh"
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+		
+		colorecho "[+] Installation of configuration files"
 		wget -O $pathuser.zprofile https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.zprofile
 		wget -O $pathuser.tmux.conf https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.tmux.conf
 		wget -O $pathuser.zshrc https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.zshrc
 		if [[ $homeuser != "/root" ]]; then
-			cp -r /root/.oh-my-zsh $pathuser.oh-my-zsh	
+			cp -r /root/.oh-my-zsh $pathuser.oh-my-zsh	#copy the .ohmyzsh file for all users
 		fi
+		#Install the theme and plugins
 		git clone https://github.com/romkatv/powerlevel10k.git $pathuser.oh-my-zsh/themes/powerlevel10k
   		git clone https://github.com/zsh-users/zsh-autosuggestions.git $pathuser.oh-my-zsh/plugins/zsh-autosuggestions
 		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $pathuser.oh-my-zsh/plugins/zsh-syntax-highlighting
@@ -83,3 +94,5 @@ function main() {
 }
 
 main
+colorecho "============================= End of installation ============================="
+colorecho "Replace your terminal's font with Hack Nerd Font Regular to get the icons" 
