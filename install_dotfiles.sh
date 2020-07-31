@@ -8,9 +8,7 @@
 #======================================================================================
 
 function colorecho() {
-	BG='\033[1;32m'
-	NC='\033[0m'
-	echo -e "${BG}$@${NC}"				
+	echo -e "\e[91m $@"				
 	sleep 2
 }
 
@@ -96,3 +94,4 @@ function main() {
 main
 colorecho "============================= End of installation ============================="
 colorecho "Replace your terminal's font with Hack Nerd Font Regular to get the icons" 
+colorecho "================================================================================"
