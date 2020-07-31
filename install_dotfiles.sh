@@ -11,7 +11,7 @@ function colorecho() {
  	BG='\033[1;32m'
 	NC='\033[0m'
 	echo -e "${BG}$@${NC}"
-	sleep 2
+	sleep 1
 }
 
 function update() {
@@ -96,7 +96,13 @@ function main() {
 	pluginszsh
 }
 
-main
+if [[ $EUID -ne 0 ]]; then
+	echo "You must be a root user" 2>&1
+	exit 1
+else
+	sleep 5
+	main "$@"
+fi
 colorecho "\e[5m                             End of installation 				   "
 colorecho "================================================================================"
 colorecho "   Replace your terminal's font with Hack Nerd Font Regular to get the icons" 
