@@ -52,9 +52,9 @@ for homeuser in $file ; do
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 		
 		colorecho "[+] Installation of configuration files"
-		wget -O $pathuser.zprofile https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.zprofile
-		wget -O $pathuser.tmux.conf https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.tmux.conf
-		wget -O $pathuser.zshrc https://raw.githubusercontent.com/Rsifff/-dotfiles/master/.zshrc
+		wget -O $pathuser.zprofile https://raw.githubusercontent.com/Rsifff/dotfiles/master/.zprofile
+		wget -O $pathuser.tmux.conf https://raw.githubusercontent.com/Rsifff/dotfiles/master/.tmux.conf
+		wget -O $pathuser.zshrc https://raw.githubusercontent.com/Rsifff/dotfiles/master/.zshrc
 		if [[ $homeuser != "/root" ]]; then
 			cp -r /root/.oh-my-zsh $pathuser.oh-my-zsh	#copy the .ohmyzsh file for all users
 		fi
