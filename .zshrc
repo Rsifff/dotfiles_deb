@@ -25,7 +25,8 @@ plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions tmux au
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # --------------------------------- ALIASES -----------------------------------
-  # color
+setxkbmap -option caps:swapescape
+# color
  alias ls='ls --color=auto'
  alias grep='grep --color=auto'
  alias fgrep='fgrep --color=auto'
