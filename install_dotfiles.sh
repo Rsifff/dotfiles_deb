@@ -96,13 +96,8 @@ function main() {
 	pluginszsh
 }
 
-if [[ $EUID -ne 0 ]]; then
-	echo "You must be a root user" 2>&1
-	exit 1
-else
-	sleep 5
 	main "$@"
-fi
+
 colorecho "\e[5m                             End of installation 				   "
 colorecho "================================================================================"
 colorecho "   Replace your terminal's font with Hack Nerd Font Regular to get the icons" 
