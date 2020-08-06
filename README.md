@@ -2,6 +2,8 @@
 
 This project was carried out to practice bash language and to rapidly deploy a work environment.
 
+![](images/screen.PNG)
+
 ## Installation
 
 To install the dotfiles, you must use a user with administrator rights
