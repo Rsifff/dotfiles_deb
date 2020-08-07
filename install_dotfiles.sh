@@ -21,7 +21,7 @@ function update() {
 
 	function apt_packages() {
 	colorecho "[+] Installing APT packages"
-	apt install -y curl zsh python3-pip git tmux neofetch cargo
+	apt install -y curl zsh python3-pip git tmux neofetch 
 }
 
 function fonts() {
@@ -72,7 +72,9 @@ function ohmyzsh() {
 function tools() {
 	colorecho "[+] Installing tools "
 	pip3 install lolcat
-	cargo install lsd
+	wget https://github.com/Peltoche/lsd/releases/download/0.17.0/lsd_0.17.0_amd64.deb
+        dpkg -i lsd_0.17.0_amd64.deb
+        rm -f lsd_0.17.0_amd64.deb
 }
 
 function pluginszsh() {
