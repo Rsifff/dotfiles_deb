@@ -21,7 +21,7 @@ function update() {
 
 	function apt_packages() {
 	colorecho "[+] Installing APT packages"
-	apt install -y curl zsh python3-pip git tmux neofetch wget rubygems build-essential
+	apt install -y rubygems curl zsh python3-pip git tmux neofetch  
     	gem install tmuxinator	
 }
 
