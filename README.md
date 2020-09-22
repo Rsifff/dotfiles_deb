@@ -19,7 +19,10 @@ This script allows you to obtain this result
 - [lolcat](https://github.com/busyloop/lolcat)
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [tmux](https://github.com/tmux/tmux/wiki)
+- [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - [lsd (LSDeluxe)](https://github.com/Peltoche/lsd)
+
+
 
 ## Installation
 

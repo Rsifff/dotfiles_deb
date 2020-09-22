@@ -41,6 +41,7 @@ alias xclip='xclip -selection c'
 # replace commands
 command -v vim > /dev/null && alias vi='vim'
 # ls & tree
+alias ls='lsd'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -F'
