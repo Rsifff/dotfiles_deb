@@ -21,8 +21,8 @@ function update() {
 
 	function apt_packages() {
 	colorecho "[+] Installing APT packages"
-	apt install -y rubygems curl zsh python3-pip git tmux neofetch  
-    	gem install tmuxinator	
+	apt install -y ruby-full curl zsh python3-pip git tmux neofetch  
+	gem install tmuxinator
 }
 
 function fonts() {
