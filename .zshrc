@@ -1,6 +1,12 @@
-# --------------------------------- EXPORT -----------------------------------
+##filename            	: .zshrc
+##description    	: https://github.com/Rsifff/dotfiles/
+##author             	: Roman Le Page (Rsifff)
+##date                	: 2020/07/31
+##version             	: 1.0
+##=============================================================
 
-# colorize man pages
+# --------------------------------- EXPORT --------------------------------
+
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -10,9 +16,8 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
 export ZSH="$HOME/.oh-my-zsh"
-
-# colorize term
 export TERM=xterm-256color
+export EDITOR='vim' 
 
 # --------------------------------- ZSH -----------------------------------
 
@@ -20,34 +25,34 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions tmux autojump thefuck)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
-# --------------------------------- ALIASES -----------------------------------
+# ------------------------------- ALIASES ---------------------------------
 # color
- alias ls='ls --color=auto'
- alias grep='grep --color=auto'
- alias fgrep='fgrep --color=auto'
- alias egrep='egrep --color=auto'
- alias diff='diff --color=auto'
- alias ip='ip --color=auto'
- alias pacman='pacman --color=auto'
-  # other
-  #alias ..='cd ..'
- alias scss='scss --no-cache --quiet --sourcemap=none'
- alias xclip='xclip -selection c'
-  # replace commands
- command -v vim > /dev/null && alias vi='vim'
-  # ls & tree
- alias ll='ls -l'
- alias la='ls -A'
- alias l='ls -F'
- command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
- alias tree='lsd --tree'
- command -v colorls > /dev/null && alias ls='colorls --sd --gs' && \
- alias tree='colorls --tree'
-  # top
- command -v htop > /dev/null && alias top='htop'
- command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
- command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
- command -v bashtop > /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the the
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias pacman='pacman --color=auto'
+# other
+#alias ..='cd ..'
+alias scss='scss --no-cache --quiet --sourcemap=none'
+alias xclip='xclip -selection c'
+# replace commands
+command -v vim > /dev/null && alias vi='vim'
+# ls & tree
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -F'
+command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
+alias tree='lsd --tree'
+command -v colorls > /dev/null && alias ls='colorls --sd --gs' && \
+alias tree='colorls --tree'
+# top
+command -v htop > /dev/null && alias top='htop'
+command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v bashtop > /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the the
 
 # ----------------------------------- MISC -----------------------------------
 # enable terminal linewrap
@@ -67,7 +72,7 @@ precmd () { print -Pn "\e]0;%n@%m: %~\a" }
         ;;
 esac
 
-# ------------------------------- ZSH SETTINGS --------------------------------
+# ------------------------------ ZSH SETTINGS --------------------------------
 
 # ----- options -----
 setopt AUTO_CD
