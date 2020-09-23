@@ -2,9 +2,13 @@
 
 This script allows you to obtain this result 
 
-![](images/screen.PNG)
+![](images/screen1.PNG)
 
-## Plugins ZSH
+This script allows you to deploy a functional configuration, quickly and simply. The plugins will allow you to have a pleasant environment and to gain in productivity. 
+
+![](images/screen2.PNG)
+
+## :gear: Plugins ZSH
 
 - [thefuck](https://github.com/nvbn/thefuck)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
@@ -14,7 +18,7 @@ This script allows you to obtain this result
 - [autojump](https://github.com/wting/autojump)
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 
-## Tools 
+## :toolbox: Tools 
 
 - [lolcat](https://github.com/busyloop/lolcat)
 - [neofetch](https://github.com/dylanaraps/neofetch)
@@ -24,7 +28,7 @@ This script allows you to obtain this result
 
 
 
-## Installation
+## :open_book: Installation
 
 To install the dotfiles, you must use a user with administrator rights
 
@@ -33,3 +37,4 @@ wget https://raw.githubusercontent.com/Rsifff/dotfiles/master/install_dotfiles.s
 chmod +x install_dotfiles.sh
 ./install_dotfiles.sh
 rm install_dotfiles.sh
+```
