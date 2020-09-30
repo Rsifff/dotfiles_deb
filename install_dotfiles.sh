@@ -1,6 +1,6 @@
 #!/bin/bash
 #filename            	: install_dotfiles.sh
-#description    	 	: This script is used to install the dotfiles of my github: https://github.com/Rsifff/dotfiles/
+#description    	: This script is used to install the dotfiles of my github: https://github.com/Rsifff/dotfiles/
 #author             	: Roman Le Page (Rsifff)
 #date                	: 2020/07/31
 #version             	: 1.0
@@ -74,8 +74,8 @@ function tools() {
 	colorecho "[+] Installing tools "
 	pip3 install lolcat
 	wget https://github.com/Peltoche/lsd/releases/download/0.17.0/lsd_0.17.0_amd64.deb
-    dpkg -i lsd_0.17.0_amd64.deb
-    rm -f lsd_0.17.0_amd64.deb
+    	dpkg -i lsd_0.17.0_amd64.deb
+    	rm -f lsd_0.17.0_amd64.deb
 }
 
 function pluginszsh() {
