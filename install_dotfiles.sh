@@ -53,7 +53,6 @@ function ohmyzsh() {
 			sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 		
 			colorecho "[+] Installation of configuration files"
-			wget -O $pathuser.zprofile https://raw.githubusercontent.com/Rsifff/dotfiles_deb/master/.zprofile
 			wget -O $pathuser.tmux.conf https://raw.githubusercontent.com/Rsifff/dotfiles_deb/master/.tmux.conf
 			wget -O $pathuser.zshrc https://raw.githubusercontent.com/Rsifff/dotfiles_deb/master/.zshrc
 			if [[ $homeuser != "/root" ]]; then
